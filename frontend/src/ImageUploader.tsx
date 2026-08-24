@@ -65,10 +65,11 @@ const images = [
 ]
 
 type ImageUploaderProps = {
+  onAnalysisStart: () => void
   onAnalysisComplete: (palette: number[][], histogram: number[]) => void
 }
 
-function ImageUploader({onAnalysisComplete}: ImageUploaderProps) {
+function ImageUploader({onAnalysisComplete, onAnalysisStart}: ImageUploaderProps) {
 
     const [currentIndex, setCurrentIndex] = useState(0)
     const [uploadedImage, setUploadedImage] = useState<string | null>(null)
@@ -87,6 +88,8 @@ function ImageUploader({onAnalysisComplete}: ImageUploaderProps) {
 
         const formData = new FormData()
         formData.append("image", file)
+
+        onAnalysisStart()
 
         const response = await fetch("https://matchmaker-by-color.onrender.com/analyze", {
             method: "POST",

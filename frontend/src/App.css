@@ -84,3 +84,13 @@ h1{
     opacity: 1;
   }
 }
+
+.analysis-loading {
+  position: absolute;
+  left: 1050px;
+  top: 350px;
+
+  color: rgb(12, 117, 255);
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 25px;
+}

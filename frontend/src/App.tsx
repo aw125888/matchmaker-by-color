@@ -11,6 +11,7 @@ function App() {
   const [histogram, setHistogram] = useState<number[] | null>(null)
   const [hasMatches, setHasMatches] = useState(false)
   const [uploadKey, setUploadKey] = useState(0)
+  const [isAnalyzing, setIsAnalyzing] = useState(false)
 
   const handleStartOver = () => {
     setHasUploaded(false)
@@ -30,11 +31,13 @@ return (
       </span>
     </h1>
     <ImageUploader
+    onAnalysisStart={() => setIsAnalyzing(true)}
     key={uploadKey}
     onAnalysisComplete={(palette, histogram) => {
     setPalette(palette)
     setHistogram(histogram)
     setHasUploaded(true)
+    setIsAnalyzing(false)
   }}
 />
 
@@ -57,6 +60,13 @@ return (
   )}
 </h2>
 
+{
+  isAnalyzing && (
+    <div className ="analysis-loading">
+      Doing hard math...zzzz
+    </div>
+  )
+}
 {hasUploaded && palette && histogram && (
   <ColorAnalysis
     palette={palette}
