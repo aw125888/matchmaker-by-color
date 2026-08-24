@@ -25,7 +25,7 @@ function ColorAnalysis({ palette, histogram, onMatchesReady , onAgain,onStartOve
 
     const handleRelationship = async (relationship: string) => {
         setIsSearching(true)
-        const response = await fetch ("http://127.0.0.1:8000/match", {
+        const response = await fetch ("https://matchmaker-by-color.onrender.com/match", {
             method: "POST", 
             headers: {
                 "Content-Type": "application/json", 

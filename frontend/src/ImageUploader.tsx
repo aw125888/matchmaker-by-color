@@ -88,7 +88,7 @@ function ImageUploader({onAnalysisComplete}: ImageUploaderProps) {
         const formData = new FormData()
         formData.append("image", file)
 
-        const response = await fetch("http://127.0.0.1:8000/analyze", {
+        const response = await fetch("https://matchmaker-by-color.onrender.com/analyze", {
             method: "POST",
             body: formData,
         })
