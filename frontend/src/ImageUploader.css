@@ -1,0 +1,98 @@
+.upload-button {
+    position: absolute; 
+
+    top: 50%;
+    left:50%; 
+    transform: translate(-50%, -50%);
+    
+    color: rgb(12, 117, 255); 
+    font-size: 60px;
+    cursor: pointer; 
+
+    z-index: 1; 
+}
+
+.image-stage {
+  width: 600px;
+  height: 500px;
+  position: relative;
+  margin-top: 100px;
+  margin-left: 170px;
+}
+
+.slideshow-image,
+.uploaded-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+}
+
+.uploaded-image {
+  opacity: 0;
+}
+
+.has-upload .slideshow-image {
+  animation: slideshowFadeOut 0.6s forwards;
+}
+
+.has-upload .uploaded-image {
+  animation: uploadedFadeIn 0.6s forwards;
+  animation-delay: 0.5s;
+}
+
+.thanks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  color: rgb(12, 117, 255);
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-size: 20px;
+
+  opacity: 0;
+  animation: thanksAnimation 1.6s forwards;
+  animation-delay: 0.4s;
+}
+
+@keyframes slideshowFadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes uploadedFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes thanksAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}

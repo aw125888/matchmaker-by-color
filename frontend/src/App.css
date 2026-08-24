@@ -1,0 +1,86 @@
+main{
+  padding-left: 50px; 
+}
+
+h1{
+  margin: 0; 
+  font-family: system-ui, 'Segoe UI', Roboto, sans-serif;
+  color: rgb(12, 117, 255); 
+  font-size: 80px;
+  font-weight: 430;
+}
+
+
+.by-color {
+  font-size: 29px;
+  position: relative;
+  top: 10px;
+}
+
+.blue {
+  color: rgb(12, 117, 255);
+}
+
+.white {
+  color: white;
+}
+
+
+.instruction {
+  margin: 40px 0 0;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  color: rgb(12, 117, 255);
+  font-size: 20px;
+  font-weight: normal;
+  transition: opacity 1.4s ease;
+  position: relative;
+  min-height: 30px;
+}
+.instruction-old,
+.instruction-new,
+.instruction-new-new {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.instruction-old.fade-out {
+  animation: fadeOut 1.2s ease forwards;
+}
+
+.instruction-new {
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.47s;
+  opacity: 0;
+}
+
+.instruction-new.fade-out {
+  animation: fadeOut 1.2s ease forwards;
+}
+
+.instruction-new-new {
+  animation: fadeIn 0.8s ease forwards;
+  animation-delay: 0.47s;
+  opacity: 0;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
