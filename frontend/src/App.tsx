@@ -43,12 +43,12 @@ return (
 
     <h2 className="instruction">
   <span className={`instruction-old ${hasUploaded ? 'fade-out' : ''}`}>
-    The Matchmaker needs a matchee from you. Click the + and let's start the introductions.
+    The Matchmaker needs a match from you. Click the + and let's start the introductions.
   </span>
 
   {hasUploaded && !hasMatches && (
   <span className={`instruction-new ${hasMatches ? 'fade-out' : ''}`}>
-    Matchee located: Choose your slice.
+    Candidate located: Choose your slice.
   </span>
 )}
 
