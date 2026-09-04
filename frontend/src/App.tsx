@@ -43,7 +43,7 @@ return (
 
     <h2 className="instruction">
   <span className={`instruction-old ${hasUploaded ? 'fade-out' : ''}`}>
-    The Matchmaker needs a match from you. Click the + and let's start the introductions.
+    The Matchmaker needs a candidate from you. Click the + and let's start the introductions.
   </span>
 
   {hasUploaded && !hasMatches && (
