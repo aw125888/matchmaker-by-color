@@ -85,7 +85,7 @@ def shift_soft_complementary(histogram):
 
 def shift_analogous(histogram):
     shifted_histograms = []
-    for shift_value in [-30, 30]: 
+    for shift_value in [-3, 3]: 
         shifted_histogram = shift_hue(histogram, shift_value)
         shifted_histograms.append(shifted_histogram)
     return shifted_histograms
@@ -93,15 +93,3 @@ def shift_analogous(histogram):
 
  
 
-
-
-
-
-# #test
-# pixels = get_pixels(load_image("test_image2.jpg"))
-# histogram = build_histogram(pixels)
-# print(pixels.shape) 
-# print(histogram.shape)
-# print(histogram.sum())
-
-# visualize_histogram(histogram)
