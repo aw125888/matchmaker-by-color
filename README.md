@@ -44,7 +44,7 @@ No hue transformation is applied. The system searches directly for artworks with
 ### Soft-Complementary
 **Tiny! Adventures!**
 
-The histogram is shifted approximately 150°, producing a relationship that approaches complementary colors without going fully opposite on the hue wheel.
+The histogram is shifted approximately 130°, producing a relationship that approaches complementary colors without going fully opposite on the hue wheel.
 
 ---
 
